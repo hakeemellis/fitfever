@@ -1,4 +1,6 @@
 import React from 'react';
+import CartIcon from '../components/CartIcon'; // Import the CartIcon component
+
 
 const Home = () => {
   return (
@@ -17,9 +19,17 @@ const Home = () => {
               <a href="#" className="hover:text-gray-300">Contact</a>
             </nav>
             <div className="flex items-center">
-              <a href="#" className="hover:text-gray-300 px-1">Cart</a>
-              <a href="#" className="hover:text-gray-300 px-8">Login</a>
-            </div>
+  <a href="#" className="hover:text-gray-300 px-1 relative">
+    <div className="flex items-center">
+      <CartIcon />
+      <span className="ml-1">Cart</span>
+    </div>
+  </a>
+  <a href="#" className="hover:text-gray-300 px-1 relative">
+    <span className="ml-1">Login</span>
+  </a>
+</div>
+
           </div>
         </div>
       </header>
