@@ -1,11 +1,6 @@
 import React from 'react';
 import Header from './header';
 
-// Import video files using an absolute path
-import woMp4 from '../';
-import woWebm from '/assets/videos/wo.webm';
-import woOgv from '/assets/videos/wo.ogv';
-
 const Home = () => {
   return (
     <div>
@@ -16,9 +11,9 @@ const Home = () => {
         {/* Video Background */}
         <video className="absolute top-0 left-0 min-w-full min-h-full object-cover z-0" 
          autoPlay muted loop>
-          <source src={woMp4} type="video/mp4" />
-          <source src={woWebm} type="video/webm" />
-          <source src={woOgv} type="video/ogg" />
+          <source src="/assets/videos/wo.mp4" type="video/mp4" />
+          <source src="/assets/videos/wo.webm" type="video/webm" />
+          <source src="/assets/videos/wo.ogv" type="video/ogg" />
           Your browser does not support the video tag.
         </video>
 
@@ -39,3 +34,4 @@ const Home = () => {
 };
 
 export default Home;
+
