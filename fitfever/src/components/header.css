@@ -1,0 +1,6 @@
+/* Header.css */
+.header-transition {
+    transition: background-color 0.6s ease, opacity 0.3s ease; /* Transition both background color and opacity */
+    opacity: 1; /* Initially set opacity to 1 */
+  }
+  
