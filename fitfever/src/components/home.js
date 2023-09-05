@@ -25,7 +25,7 @@ const Home = () => {
               <span className="ml-1">Cart</span>
               </div>
               </a>
-            <a href="#" className="hover:text-gray-300 px-8 relative">
+            <a href="#" className="hover:text-gray-300 px-5 relative mr-1">
             <span className="ml-1">Login</span>
             </a>
             </div>

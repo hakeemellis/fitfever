@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductDetail from './ProductDetail'; // Import your ProductDetail component
 
 const ProductCatalog = () => {
   const products = [
@@ -16,6 +17,9 @@ const ProductCatalog = () => {
     },
     // Add more product items
   ];
+
+    // Display a specific product (e.g., the first one)
+    const highlightedProduct = products[0];
 
   return (
     <div className="container mx-auto py-8">
@@ -36,6 +40,8 @@ const ProductCatalog = () => {
           </div>
         ))}
       </div>
+      <br></br>
+      <ProductDetail product={highlightedProduct} />
     </div>
   );
 };
