@@ -7,19 +7,27 @@ const ProductCatalog = () => {
       id: 1,
       name: 'Running Shoes',
       price: 49.99,
-      image: 'running-shoes.jpg',
+      image: 'running.png',
     },
     {
       id: 2,
       name: 'Yoga Mat',
       price: 19.99,
-      image: 'yoga-mat.jpg',
+      image: 'yogamat.png',
     },
     // Add more product items
   ];
 
+    // Define the featured product
+    const featuredProduct = {
+      id: 3,
+      name: 'Full Workout Women Suit',
+      price: 59.99,
+      image: 'featured.jpg',
+    };
+
     // Display a specific product (e.g., the first one)
-    const highlightedProduct = products[0];
+    const highlightedProduct = featuredProduct;
 
   return (
     <div className="container mx-auto py-8">
@@ -28,9 +36,9 @@ const ProductCatalog = () => {
         {products.map((product) => (
           <div key={product.id} className="bg-white p-4 shadow-md">
             <img
-              src={`/images/${product.image}`}
+              src={`/assets/images/${product.image}`}
               alt={product.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-60 object-cover"
             />
             <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
             <p className="text-gray-600">${product.price.toFixed(2)}</p>
@@ -41,7 +49,10 @@ const ProductCatalog = () => {
         ))}
       </div>
       <br></br>
-      <ProductDetail product={highlightedProduct} />
+      <h2 className="text-2xl text-center font-semibold mb-4">Featured</h2>
+      <div className="flex justify-center items-center">
+       <ProductDetail product={highlightedProduct} />
+      </div>
     </div>
   );
 };
