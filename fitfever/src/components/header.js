@@ -3,6 +3,7 @@ import CartIcon from './CartIcon'; // Import the CartIcon component
 import './header.css'; // Import the CSS file
 
 const Header = () => {
+  
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth <= 800);
