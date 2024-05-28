@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fitfever/static/css/main.379d285b.css",
+    "main.js": "/fitfever/static/js/main.5e06fd95.js",
+    "static/js/787.cef9def9.chunk.js": "/fitfever/static/js/787.cef9def9.chunk.js",
+    "index.html": "/fitfever/index.html",
+    "main.379d285b.css.map": "/fitfever/static/css/main.379d285b.css.map",
+    "main.5e06fd95.js.map": "/fitfever/static/js/main.5e06fd95.js.map",
+    "787.cef9def9.chunk.js.map": "/fitfever/static/js/787.cef9def9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.379d285b.css",
+    "static/js/main.5e06fd95.js"
+  ]
+}
