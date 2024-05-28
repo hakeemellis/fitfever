@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import CartIcon from './CartIcon'; // Import the CartIcon component
 import './header.css'; // Import the CSS file
+import './shop'
 
 const Header = () => {
   
-  const [isSticky, setIsSticky] = useState(false);
+  const [isSticky, setIsSticky] = useState(false); //Both variables are false (because of the state set) until you make one true.
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth <= 800);
+  const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth <= 767);
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -25,7 +26,7 @@ const Header = () => {
 
   // Function to check and update the screen size
   const checkScreenSize = () => {
-    setIsMobileScreen(window.innerWidth <= 768);
+    setIsMobileScreen(window.innerWidth <= 767);
   };
 
   useEffect(() => {
@@ -46,29 +47,15 @@ const Header = () => {
       <header className={`fixed top-0 left-0 right-0 z-50 ${isSticky ? 'bg-black header-transition' : 'bg-transparent header-transition'} text-white`}>
         <div className="container mx-auto py-4">
           <div className="flex items-center justify-between">
-            <div className="logo">
+            <div>
               <h1 className="text-2xl font-bold px-7">Fit Fever</h1>
             </div>
 
-            {/* Hamburger Menu Button */}
-            <button
-              className="md:hidden absolute right-10"
-              onClick={toggleMobileMenu}
-            >
+            {/* Hamburger Mobile Menu Button */}
+            <button className="md:hidden absolute right-10" onClick={toggleMobileMenu}>
               {/* Replace with your SVG icon */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-7 w-7 text-white cursor-pointer"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-7 w-7 text-white cursor-pointer">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
               </svg>
             </button>
 
@@ -80,6 +67,7 @@ const Header = () => {
                 <a href="#" className="block my-2 hover:text-gray-300">Shop</a>
                 <a href="#" className="block my-2 hover:text-gray-300">About</a>
                 <a href="#" className="block my-2 hover:text-gray-300">Contact</a>
+                /
 
                 {/* Include Cart and Login components */}
                 <div className="flex items-center">

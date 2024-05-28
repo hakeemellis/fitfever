@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const HomePage = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <Home /> {/* Render the entire Home component */}
       <ProductCatalog />
       <Footer />
